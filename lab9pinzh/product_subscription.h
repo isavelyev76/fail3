@@ -1,25 +1,23 @@
-#ifndef PRODUCT_H
-#define PRODUCT_H
+#ifndef PRODUCT_SUBSCRIPTION_H
+#define PRODUCT_SUBSCRIPTION_H
 
 #include <string>
 
 class Product
 {
 private:
-    double price;
-    int quantity;
     std::string category;
     std::string name;
+    double price;
+    int quantity;
 
 public:
-    Product(double price, int quantity, const std::string& category, const std::string& name);
+    Product(const std::string& category, const std::string& name, double price, int quantity);
 
-    double getPrice() const;
-    int getQuantity() const;
     std::string getCategory() const;
     std::string getName() const;
-
-    void display() const;
+    double getPrice() const;
+    int getQuantity() const;
 };
 
 #endif

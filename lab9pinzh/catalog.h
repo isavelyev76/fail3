@@ -15,6 +15,7 @@ public:
     void displayProductsAbovePrice(double price) const;
     void sortProductsByDescendingQuantity();
     void sortProductsByCategoryAndPrice();
+    const std::vector<Product>& getProducts() const;
 };
 
 #endif
