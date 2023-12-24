@@ -6,13 +6,15 @@
 #include "constants.h"
 #include "file_reader.h"
 #include "product_subscription.h"
-
+using namespace std;
 int main()
 {
+
     setlocale(LC_ALL, "Russian");
     std::cout << "Лабораторная работа №8. GIT\n";
     std::cout << "Вариант №0. Библиотечный абонемент\n";
-    std::cout << "Автор: Сергей Ермоченко\n\n";
+    std::cout << "Автор: Сергей Ермоченко\n";
+    std::cout << "Группа: 23ПИнж1д\n";
 
     Catalog catalog;
     Product* products[MAX_FILE_ROWS_COUNT];
