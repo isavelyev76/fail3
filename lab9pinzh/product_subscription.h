@@ -1,14 +1,25 @@
-#ifndef PRODUCT_SUBSCRIPTION_H
-#define PRODUCT_SUBSCRIPTION_H
+#ifndef PRODUCT_H
+#define PRODUCT_H
 
-#include "constants.h"
+#include <string>
 
-struct Product
+class Product
 {
-    double cost;
+private:
+    double price;
     int quantity;
-    char category[MAX_STRING_SIZE];
-    char name[MAX_STRING_SIZE];
+    std::string category;
+    std::string name;
+
+public:
+    Product(double price, int quantity, const std::string& category, const std::string& name);
+
+    double getPrice() const;
+    int getQuantity() const;
+    std::string getCategory() const;
+    std::string getName() const;
+
+    void display() const;
 };
 
 #endif
